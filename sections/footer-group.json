@@ -1,0 +1,81 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_YcdFD6": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company"
+          }
+        },
+        "link_list_TwLMcU": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Discover Goodee",
+            "menu": "discover-goodee"
+          }
+        },
+        "link_list_jTtk7c": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Care",
+            "menu": "customer-care"
+          }
+        },
+        "image_qDz9VU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b-corp-small_png.png",
+            "image_width": 50,
+            "alignment": "center"
+          }
+        },
+        "image_nyxeQP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/climate-neutral-vertical_png.png",
+            "image_width": 50,
+            "alignment": "center"
+          }
+        },
+        "image_x7hbLD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1-ftp-vertical_png.png",
+            "image_width": 50,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_YcdFD6",
+        "link_list_TwLMcU",
+        "link_list_jTtk7c",
+        "image_qDz9VU",
+        "image_nyxeQP",
+        "image_x7hbLD"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1e44406c-4ae1-40e1-9e1c-e4b6cbba728b",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

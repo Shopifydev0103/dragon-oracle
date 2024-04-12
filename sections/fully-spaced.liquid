@@ -1,0 +1,137 @@
+
+{{ 'fully-spaced.css' | asset_url | stylesheet_tag }}
+
+<div class="fully-spaced">
+    <div class="container page-width">
+        {%- if section.settings.title -%}
+            <span class="title">{{ section.settings.title }}</span>
+        {%- endif -%}
+        
+        <div class="c-dis-mobile fully-img grid--{{ section.settings.columns_desktop }}-col-desktop dis-wrap">
+            {%  liquid 
+                if section.settings.mobile_to_show_number == true
+                    assign mobileNumber = section.settings.imgs_to_show
+                endif
+                %}
+            {% for block in section.blocks limit: mobileNumber %}
+               {% if block.type == "block" %}
+                    {% if block.settings.item_img %}
+                        <img 
+                            srcset="
+                            {% if block.settings.item_img.width >= 350 %}{{ block.settings.item_img | image_url: width: 350 }} 350w,{% endif %}
+                            {% if block.settings.item_img.width >= 750 %}{{ block.settings.item_img | image_url: width: 750 }} 750w,{% endif %}
+                            {% if block.settings.item_img.width >= 1100 %}{{ block.settings.item_img | image_url: width: 1100 }} 1100w,{% endif %}
+                            {% if block.settings.item_img.width >= 1500 %}{{ block.settings.item_img | image_url: width: 1500 }} 1500w,{% endif %}
+                            {% if block.settings.item_img.width >= 2200 %}{{ block.settings.item_img | image_url: width: 2200 }} 2200w,{% endif %}
+                            {% if block.settings.item_img.width >= 3000 %}{{ block.settings.item_img | image_url: width: 3000 }} 3000w,{% endif %}
+                            {{ block.settings.item_img | image_url }} {{ block.settings.item_img.width }}w
+                            "
+                            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                            src="{{ block.settings.item_img | image_url: width: 1100 }}"
+                            loading="eager"
+                            fetchpriority="high"
+                            width="{{ block.settings.item_img.width }}"
+                            height="{{ block.settings.item_img.height }}"
+                            alt="{{ block.settings.item_img.alt | escape }}"
+                            class="grid__item fully--image"
+                        >
+                    {% endif %}
+               {% endif %} 
+            {% endfor %}
+        </div>
+
+        <div class="dis-desktop fully-img grid--{{ section.settings.columns_desktop }}-col-desktop dis-wrap">
+            {% for block in section.blocks %}
+               {% if block.type == "block" %}
+                    {% if block.settings.item_img %}
+                        <img 
+                            srcset="
+                            {% if block.settings.item_img.width >= 350 %}{{ block.settings.item_img | image_url: width: 350 }} 350w,{% endif %}
+                            {% if block.settings.item_img.width >= 750 %}{{ block.settings.item_img | image_url: width: 750 }} 750w,{% endif %}
+                            {% if block.settings.item_img.width >= 1100 %}{{ block.settings.item_img | image_url: width: 1100 }} 1100w,{% endif %}
+                            {% if block.settings.item_img.width >= 1500 %}{{ block.settings.item_img | image_url: width: 1500 }} 1500w,{% endif %}
+                            {% if block.settings.item_img.width >= 2200 %}{{ block.settings.item_img | image_url: width: 2200 }} 2200w,{% endif %}
+                            {% if block.settings.item_img.width >= 3000 %}{{ block.settings.item_img | image_url: width: 3000 }} 3000w,{% endif %}
+                            {{ block.settings.item_img | image_url }} {{ block.settings.item_img.width }}w
+                            "
+                            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                            src="{{ block.settings.item_img | image_url: width: 1100 }}"
+                            loading="eager"
+                            fetchpriority="high"
+                            width="{{ block.settings.item_img.width }}"
+                            height="{{ block.settings.item_img.height }}"
+                            alt="{{ block.settings.item_img.alt | escape }}"
+                            class="grid__item fully--image"
+                        >
+                    {% endif %}
+               {% endif %} 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% schema %}
+    {
+        "name": "fully-spaced",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Follow Us on Instagram"
+            },
+            {
+                "type": "checkbox",
+                "id": "mobile_to_show_number",
+                "label": "Mobile show number",
+                "default": true
+            },
+            {
+                "type": "range",
+                "id": "imgs_to_show",
+                "min": 2,
+                "max": 25,
+                "step": 1,
+                "default": 4,
+                "label": "Maximun Images to show when mobile"
+                },
+                {
+                "type": "range",
+                "id": "columns_desktop",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "default": 4,
+                "label": "Number of columns on desktop"
+                }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "item_img",
+                        "label": "Item Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "fully-spaced",
+                "blocks": [
+                    {
+                        "type": "block"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

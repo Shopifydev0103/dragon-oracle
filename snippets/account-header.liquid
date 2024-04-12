@@ -1,0 +1,26 @@
+<style>
+    .c-account__text {
+        width: 50%;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #171717;
+    }
+    .c-account__icon {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .c-account__text {
+            display: none;
+        }
+        .c-account__icon {
+            display: flex;
+        }
+    }
+</style>
+
+<a href="" class="c-account__text">Account</a>
+<div class="c-account__icon">{% render 'icon_account' %}</div>

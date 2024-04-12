@@ -1,0 +1,57 @@
+{{ 'c-header-search.css' | asset_url | stylesheet_tag }}
+<style>
+  @media (max-width: 768px) {
+    .c-search-modal__form {
+        display: none;
+    }
+}
+</style>
+
+<form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form c-search-modal__form">
+  <div class="field">
+    <input
+      class="search__input field__input-header c-search__input-pointer--pl"
+      id="{{ input_id }}"
+      type="search"
+      name="q"
+      value="{{ search.terms | escape }}"
+      {% comment %} placeholder="{{ 'general.search.search' | t }}" {% endcomment %}
+      {%- if settings.predictive_search_enabled -%}
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="predictive-search-results"
+        aria-controls="predictive-search-results"
+        aria-haspopup="listbox"
+        aria-autocomplete="list"
+        autocorrect="off"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+      {%- endif -%}
+    >
+    {% comment %} <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label> {% endcomment %}
+    <input type="hidden" name="options[prefix]" value="last">
+    <button
+      type="reset"
+      class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+      aria-label="{{ 'general.search.reset' | t }}"
+    >
+      <svg class="icon icon-close" aria-hidden="true" focusable="false">
+        <use xlink:href="#icon-reset">
+      </svg>
+    </button>
+    <button class="search__button field__button c-search__btn--left" aria-label="{{ 'general.search.search' | t }}">
+      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.3675 13.6833C13.3392 13.705 13.3117 13.7292 13.285 13.7558C13.2583 13.7825 13.235 13.8092 13.2125 13.8383C12.1642 14.8492 10.7383 15.47 9.16666 15.47C7.55582 15.47 6.09832 14.8183 5.04166 13.7617C3.98499 12.705 3.33332 11.2475 3.33332 9.63667C3.33332 8.02584 3.98499 6.56834 5.04166 5.51167C6.09832 4.45501 7.55582 3.80334 9.16666 3.80334C10.7775 3.80334 12.235 4.45501 13.2917 5.51167C14.3483 6.56834 15 8.02584 15 9.63667C15 11.2083 14.3792 12.6342 13.3675 13.6833ZM18.0892 17.3808L15.0267 14.3183C16.0525 13.035 16.6667 11.4075 16.6667 9.63667C16.6667 7.56584 15.8267 5.69001 14.47 4.33334C13.1133 2.97667 11.2375 2.13667 9.16666 2.13667C7.09582 2.13667 5.21999 2.97667 3.86332 4.33334C2.50666 5.69001 1.66666 7.56584 1.66666 9.63667C1.66666 11.7075 2.50666 13.5833 3.86332 14.94C5.21999 16.2967 7.09582 17.1367 9.16666 17.1367C10.9375 17.1367 12.565 16.5225 13.8483 15.4967L16.9108 18.5592C17.2367 18.885 17.7642 18.885 18.0892 18.5592C18.4142 18.2333 18.415 17.7058 18.0892 17.3808Z" fill="black"/>
+      </svg>
+    </button>
+  </div>
+
+  {%- if settings.predictive_search_enabled -%}
+    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+      {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+    </div>
+
+    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+  {%- endif -%}
+</form>

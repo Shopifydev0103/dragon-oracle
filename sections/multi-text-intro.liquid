@@ -1,0 +1,132 @@
+
+{% comment %} {{ 'testimonal-swipr-slider.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ 'testimonal.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'testimonal-slider.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+    .swiper-button-next.next-align, .swiper-button-prev.prev-align {
+        background: unset;
+        width: 60px;
+    }
+
+    .swiper-button-next::after {
+        width: 0;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 0;
+    }
+{%- endstyle -%}
+
+<div class="testimonal background">
+    <div class="container page-width padding">  
+        {%- if section.settings.testimonial_title -%}
+            <span class="title">{{ section.settings.testimonial_title }}</span>
+        {%- endif -%}
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper pb-70">
+                {% for block in section.blocks %}
+                    {% if block.type == "block" %}
+                        <div class="swiper-slide testimonal__column">
+                            {% if block.settings.text %}
+                                <span class="text">{{ block.settings.text }}</span>
+                            {% endif %}
+                            {% if block.settings.img %}
+                                <div>
+                                    <img
+                                        src="{{ block.settings.img | image_url: width: 760 }}"
+                                        alt="{{ block.settings.img.alt | escape }}"
+                                        loading="lazy"
+                                        width="{{ block.settings.img.width }}"
+                                        height="{{ block.settings.img.height }}"
+                                    >
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div>
+                <div class="swiper-button-prev prev-align">
+                    {% comment %} <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.75">
+                    <path d="M26.25 32.2002L15.75 21.7002L26.25 11.2002" stroke="black" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    </svg> {% endcomment %}
+                    <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.75">
+<path d="M27.25 33.2002L16.75 22.7002L27.25 12.2002" stroke="black" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+
+
+                </div>
+                <div class="swiper-button-next next-align">
+                    <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.75">
+<path d="M16.75 33.2002L27.25 22.7002L16.75 12.2002" stroke="black" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+
+                </div>
+            </div>
+            
+        </div>
+       
+    </div>
+</div>   
+
+
+
+
+
+
+
+{% schema %}
+    {
+        "name": "testimonial",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "testimonial_title",
+                "label": "Testimonial title",
+                "default": "What the press are saying"
+            }
+        ],
+        "blocks": [
+            {
+            "type": "block",
+            "name": "Text with image",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Image"
+                }
+            ]
+            }
+        ],
+        "presets": [
+    {
+      "name": "testimonial",
+      "blocks": [
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+    }
+{% endschema %}

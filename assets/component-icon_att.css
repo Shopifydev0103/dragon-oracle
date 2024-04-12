@@ -1,0 +1,19 @@
+.c-header__icon--account-with-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.c-header__icon--cart-att {
+    width: 50%;
+    gap: 10px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #171717;
+}
+.c-header__icon--cart-underline {
+    text-decoration: none !important;
+}

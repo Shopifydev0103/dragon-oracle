@@ -1,0 +1,406 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "text_aWy6Yd": {
+          "type": "text",
+          "settings": {
+            "text": "NEW IN",
+            "text_style": "body",
+            "text_size": "subtitle--12"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ezcaray",
+            "heading_size": "title--71"
+          }
+        },
+        "text_8hmGD7": {
+          "type": "text",
+          "settings": {
+            "text": "Discover exclusive styles and autumn hues.",
+            "text_style": "body",
+            "text_size": "subtitle--15"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_aWy6Yd",
+        "heading",
+        "text_8hmGD7",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Homepage-image-banner.png",
+        "image_mobile": "shopify://shop_images/img-banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "c_main_question_kEkQRq": {
+      "type": "c-main-question",
+      "blocks": {
+        "content_VC4crM": {
+          "type": "content",
+          "settings": {
+            "title": "Natural Materials",
+            "text": "<p>This product has been crafted withmaterials that are derived from plants,animals, or other naturally occurringmaterials.</p>",
+            "button_label": "shop all",
+            "button_url": "",
+            "img": "shopify://shop_images/cause_natural_material_png.png"
+          }
+        },
+        "content_VpNpYa": {
+          "type": "content",
+          "settings": {
+            "title": "Heritage Craft Preservation",
+            "text": "<p>This product supports the preservation ofheritage crafts and enables artisans tocreate sustainable livelihoods through theirtraditional skills</p>",
+            "button_label": "shop all",
+            "button_url": "",
+            "img": "shopify://shop_images/cause_heritage_craft_preservation_png.png"
+          }
+        },
+        "content_rQTp6K": {
+          "type": "content",
+          "settings": {
+            "title": "Marginalized Communities",
+            "text": "<p>A portion of proceeds from the sale of thisproduct go towards disenfranchised groupsthat are specific to the brand’s social andcultural community.</p>",
+            "button_label": "shop all",
+            "button_url": "",
+            "img": "shopify://shop_images/cause_gender_advocacy_png.png"
+          }
+        },
+        "content_gzW7kt": {
+          "type": "content",
+          "settings": {
+            "title": "Natural Materials",
+            "text": "<p>This product has been crafted withmaterials that are derived from plants,animals, or other naturally occurringmaterials.</p>",
+            "button_label": "shop all",
+            "button_url": "",
+            "img": "shopify://shop_images/cause_marginalized_communities_png.png"
+          }
+        },
+        "content_LaBAp9": {
+          "type": "content",
+          "settings": {
+            "title": "Heritage Craft Preservation",
+            "text": "<p>This product supports the preservation ofheritage crafts and enables artisans tocreate sustainable livelihoods through theirtraditional skills</p>",
+            "button_label": "shop all",
+            "button_url": "",
+            "img": "shopify://shop_images/cause_gender_advocacy_png.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_VC4crM",
+        "content_VpNpYa",
+        "content_rQTp6K",
+        "content_gzW7kt",
+        "content_LaBAp9"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/impact-report-EN_180x_png.png",
+        "button_label": "Read more",
+        "Button_url": ""
+      }
+    },
+    "collection_list_w8fFVc": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_etpWbj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "baba-tree"
+          }
+        },
+        "featured_collection_fCXrQg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ezcaray"
+          }
+        },
+        "featured_collection_mWiwgi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bergs-potter"
+          }
+        },
+        "featured_collection_xm3irk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "malaika"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_etpWbj",
+        "featured_collection_fCXrQg",
+        "featured_collection_mWiwgi",
+        "featured_collection_xm3irk"
+      ],
+      "settings": {
+        "img_rate_check": true,
+        "img_rate_1": 50,
+        "img_rate_2": 60,
+        "icon_shop_show": true,
+        "text_position": "above-img",
+        "product_title_color_style": "white",
+        "page_width": true,
+        "title": "Autumn Palette",
+        "text": "Bring in the warm Fall tones with new arrivals from our most loved brands.",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 56,
+        "padding_bottom": 40,
+        "img_height": "100"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Chosen For You",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "chosen-for-you",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 40
+      }
+    },
+    "collection_list_CgpHnD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_4fW8yK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-100-usd"
+          }
+        },
+        "featured_collection_Ww4yGT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brooms-cleaning"
+          }
+        },
+        "featured_collection_rTAKQy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ecobirdy"
+          }
+        },
+        "featured_collection_qyY7f9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pots-planters"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_4fW8yK",
+        "featured_collection_Ww4yGT",
+        "featured_collection_rTAKQy",
+        "featured_collection_qyY7f9"
+      ],
+      "settings": {
+        "img_rate_check": false,
+        "img_rate_1": 50,
+        "img_rate_2": 50,
+        "icon_shop_show": true,
+        "text_position": "under-img",
+        "product_title_color_style": "black",
+        "page_width": false,
+        "title": "Shop by Category",
+        "text": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1e44406c-4ae1-40e1-9e1c-e4b6cbba728b",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "img_height": ""
+      }
+    },
+    "featured_blog_wiCG9b": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Good Stories",
+        "heading_size": "h1",
+        "blog": "blog",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multi_text_intro_wnL3h6": {
+      "type": "multi-text-intro",
+      "blocks": {
+        "block_kQCzU6": {
+          "type": "block",
+          "settings": {
+            "text": "<p>\"A tightly curated onlinemarketplace for housewareshandpicked as much for theirbeauty as for their social andenvironmental value.\"</p>",
+            "img": "shopify://shop_images/ElleDecor-logo_1_180x_png.png"
+          }
+        },
+        "block_tcHznE": {
+          "type": "block",
+          "settings": {
+            "text": "<p>\"A uniquely inspirational,aspirational and educationaldesign destination\"</p>",
+            "img": "shopify://shop_images/dezeen_c98b37cb-a741-4fa1-8e23-488e0060e594_180x_png.png"
+          }
+        },
+        "block_kN9FQ7": {
+          "type": "block",
+          "settings": {
+            "text": "<p>\"A new home and lifestyle e-commerce platform that putsgood design and sustainability atits forefront\"</p>",
+            "img": "shopify://shop_images/wallpaper_8de0718d-f4a6-4bc5-b38c-7266d3a2ee14_180x_png.png"
+          }
+        },
+        "block_efDN6k": {
+          "type": "block",
+          "settings": {
+            "text": "<p>\"A new home and lifestyle e-commerce platform that putsgood design and sustainability atits forefront\"</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_kQCzU6",
+        "block_tcHznE",
+        "block_kN9FQ7",
+        "block_efDN6k"
+      ],
+      "settings": {
+        "testimonial_title": "What the press are saying"
+      }
+    },
+    "fully_spaced_Dxz9Vk": {
+      "type": "fully-spaced",
+      "blocks": {
+        "block_qtG6ax": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/387713570_1384955335793619_4282387826195212333_n_jpg.png"
+          }
+        },
+        "block_gtEF9b": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/387734172_844114530751426_6521800964732494822_n_jpg.png"
+          }
+        },
+        "block_G6BT4x": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/387632932_235810516137647_852436750241407883_n_jpg.png"
+          }
+        },
+        "block_PHVRVT": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/386593934_310031481639423_7430162798251891498_n_jpg.png"
+          }
+        },
+        "block_yP447p": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/386355508_822592239340380_6881132716093559220_n_jpg.png"
+          }
+        },
+        "block_4Xy3xh": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/385881204_618048793863308_5629819591729858342_n_jpg.png"
+          }
+        },
+        "block_Ehkwiq": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/384173692_1397955767426846_1914925188112181875_n_jpg.png"
+          }
+        },
+        "block_XrYjmF": {
+          "type": "block",
+          "settings": {
+            "item_img": "shopify://shop_images/378023406_854899555739719_4050813985578582754_n_jpg.png"
+          }
+        }
+      },
+      "block_order": [
+        "block_qtG6ax",
+        "block_gtEF9b",
+        "block_G6BT4x",
+        "block_PHVRVT",
+        "block_yP447p",
+        "block_4Xy3xh",
+        "block_Ehkwiq",
+        "block_XrYjmF"
+      ],
+      "settings": {
+        "title": "Follow Us on Instagram",
+        "imgs_to_show": 4,
+        "columns_desktop": 4
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "c_main_question_kEkQRq",
+    "collection_list_w8fFVc",
+    "featured_collection",
+    "collection_list_CgpHnD",
+    "featured_blog_wiCG9b",
+    "multi_text_intro_wnL3h6",
+    "fully_spaced_Dxz9Vk"
+  ]
+}
