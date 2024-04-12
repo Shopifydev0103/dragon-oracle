@@ -511,6 +511,9 @@ h5:empty,
 h6:empty {
   display: none;
 } */
+p:empty {
+  display: none;
+}
 
 .link,
 .customer a {
