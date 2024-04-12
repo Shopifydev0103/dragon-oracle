@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify://shop_images/logo_dce23990-041c-414e-bafe-7771695ece79.png",
+    "logo": "shopify:\/\/shop_images\/logo_dce23990-041c-414e-bafe-7771695ece79.png",
     "logo_width": 150,
     "type_header_font": "inter_n4",
     "heading_scale": 100,
@@ -98,7 +98,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
+    "brand_description": "<p><\/p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "s",
@@ -138,44 +138,31 @@
     ],
     "blocks": {
       "5281749993944428517": {
-        "type": "shopify://apps/variant-image-wizard-swatch/blocks/app-embed/66205c03-f474-4e2c-b275-0a2806eeac16",
+        "type": "shopify:\/\/apps\/variant-image-wizard-swatch\/blocks\/app-embed\/66205c03-f474-4e2c-b275-0a2806eeac16",
         "disabled": false,
         "settings": {
         }
       },
       "14288002729265275678": {
-        "type": "shopify://apps/go-product-page-gallery-zoom/blocks/app-embed/00e2bd89-9dbb-4f36-8a7f-03768835bc78",
+        "type": "shopify:\/\/apps\/go-product-page-gallery-zoom\/blocks\/app-embed\/00e2bd89-9dbb-4f36-8a7f-03768835bc78",
         "disabled": true,
         "settings": {
         }
       },
       "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "17920835415960095625": {
-        "type": "shopify://apps/swatch-king-variants-options/blocks/variant-swatch-king/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+        "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/variant-swatch-king\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
         "disabled": false,
         "settings": {
           "alignment": "left",
           "swatch_location": "After price",
           "switch_on_hover": true,
           "preselect_variant": true
-        }
-      },
-      "16422382648059844097": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/instant-search-app-embedded/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "3678330922655817062": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {
-          "templateId": ""
         }
       }
     },
@@ -426,7 +413,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_description": "<p><\/p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
