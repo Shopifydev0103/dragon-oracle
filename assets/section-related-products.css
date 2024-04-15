@@ -5,3 +5,18 @@
 .related-products__heading {
   margin: 0 0 3rem;
 }
+.related-product-title {
+  font-family: Arial;
+  font-size: 25.9px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #171717;
+}
+.gap-10 {
+  gap: 10px !important;
+}
+.related-title--center {
+  text-align: center;
+}

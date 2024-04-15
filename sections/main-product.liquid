@@ -67,6 +67,9 @@
     >
   {%- endif -%}
 
+
+
+
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
@@ -191,24 +194,25 @@
 
 
 
-                
+
                   {% comment %} <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     <span class="product__detail_title--font">Description</span>
                     {{ product.description }}
                   </div> {% endcomment %}
-                  <div class="accordion">
+                  <div class="accordion ">
+
                     <div class="accordion-item">
                       <h2 class="product-quantity--font">Description</h2>
                       <div class="accordion-content">
                         {{ product.description }}
                       </div>
-                    
+
                     <div class="accordion-item">
                       <h2 class="product-quantity--font">Features & Details</h2>
                         <div class="accordion-content">
                           <p>{{ product.metafields.custom.features_details |  metafield_tag }}</p>
-                          
-                          
+
+
                       </div>
                     </div>
 
@@ -225,27 +229,11 @@
                        <p>{{ shop.metaobjects.icon_and_text.icon_text.icon }}</p>
                        {% assign metaObject = product.metafields.icon_and_text %}
                       <div>
-                          <img src="{{ metaObject.product_image }}" alt="Product Image">
                           <p>{{ metaObject.product_description }}</p>
                       </div>
 
                       </div>
                     </div>
-               
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
               {%- when 'sku' -%}
                 <p
                   class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -358,6 +346,7 @@
                                   </s>
                                 </dd>
                               </dl>
+
                             {%- endif -%}
                             {%- if current_qty_for_volume_pricing < volume_pricing_array.last.minimum_quantity -%}
                               {%- assign variant_price = product.selected_or_first_available_variant.price
@@ -750,6 +739,14 @@
     {%- endif -%}
 
     <script>
+
+      document.getElementsByClassName("PwzrGrid-root PwzrGrid-container PwzrGrid-item PwzrGrid-align-items-xs-center")[0].style.marginLeft = "0px";
+
+
+      var element = document.querySelectorAll(".pwzrjss5")[0];
+        element.style.border = "none";
+        element.style.borderBottom = "2px solid black";
+
       document.addEventListener('DOMContentLoaded', function () {
         function isIE() {
           const ua = window.navigator.userAgent;
@@ -758,7 +755,6 @@
 
           return msie > 0 || trident > 0;
         }
-
         if (!isIE()) return;
         const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
         const noScriptInputWrapper = document.createElement('div');
@@ -772,6 +768,13 @@
           hiddenInput.value = event.currentTarget.value;
         });
       });
+
+      document.querySelectorAll('.pwzrjss5').forEach(item => {
+        item.addEventListener('click', (evt) => {
+          evt.target.offsetParent.style.border = "none";
+          evt.target.offsetParent.style.borderBottom = "2px solid black";
+        })
+      })
     </script>
 
     {%- liquid
@@ -828,6 +831,8 @@
     </script>
   </div>
 </section>
+
+
 
 {% schema %}
 {

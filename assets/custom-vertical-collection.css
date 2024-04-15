@@ -1,0 +1,45 @@
+.collection-vertical-pd {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.toggle-btn {
+    position: relative;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding-inline-end: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    color: inherit;
+}
+
+.utility-bar__left .utility-bar__item {
+    margin-inline-end: 12px;
+}
+.button-icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.button-icon:first-child {
+    margin-inline-end: 8px;
+}
+.toggle-btn .toggle-btn__chevron {
+    transition: transform .25s ease;
+    position: absolute;
+    margin: -12px 0 0;
+    width: 24px;
+    height: 24px;
+    left: auto;
+    right: 7px;
+    top: 50%;
+    pointer-events: none;
+    border: none;
+}
+.facets-display {
+    display: none;
+}

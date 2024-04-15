@@ -68,3 +68,11 @@ volume-pricing show-more-button {
   font-size: 1.2rem;
   letter-spacing: 0.07rem;
 }
+.card-product__vendor {
+  font-family: Good Sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  color: #1a1a1a;
+}
