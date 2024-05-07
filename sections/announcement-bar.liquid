@@ -46,6 +46,20 @@
           {%- endif -%}
           <p class="c-announcement-bar__message--font announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
+
+
+          
+{% assign welcome_email_en = "Welcome to our store!" %}
+{% assign welcome_email_cs = "Vítejte v našem obchodě!" %}
+  <script>console.log("shop.local==>", {{ shop.locale | json}})</script>
+            
+{% if shop.locale == "en" %}
+{{ welcome_email_en }}
+{% elsif shop.locale == "cs" %}
+{{ welcome_email_cs }}
+{% endif %}
+
+            
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
             {%- endif -%}
